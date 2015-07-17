@@ -1,0 +1,33 @@
+.logo{
+    height: 40px;
+    width: 60px;
+}
+
+nav{
+    background-color: white;
+}
+
+nav ul a{
+    color: black;
+}
+
+.parallax-container {
+     
+    }
+
+.video-container{
+	margin: 5%;
+	
+}
+
+footer.page-footer{
+	background-color: #5CB85C;
+}
+
+.btn-floating {
+	  border-radius: 37%;
+}
+
+.btn-large{
+	line-height: 28px;
+}
