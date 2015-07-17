@@ -31,3 +31,24 @@ footer.page-footer{
 .btn-large{
 	line-height: 28px;
 }
+
+.teal{
+	background-color: white !important;
+	color: black !important;
+}
+
+.teal td{
+	
+	color: black !important;
+}
+
+.teal th{
+	
+	background-color: #58b758 !important;
+
+}
+
+
+.btn, .btn-large {
+	  background-color: #58b758;
+}
