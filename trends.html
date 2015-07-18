@@ -10,6 +10,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+       <script src='Chart.min.js'></script>
     </head>
 
     <body>
@@ -44,7 +45,7 @@
    <div class="row">
       <a class="waves-effect waves-light btn" href="prices.html"><i class="material-icons left"></i>Daily Prices</a>
       <a class="waves-effect waves-light btn" href="trends.html"><i class="material-icons left"></i>Trends</a>
-      <a class="waves-effect waves-light btn"><i class="material-icons left"></i>Period</a>
+      
 
       <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Currency</a>
 
@@ -63,108 +64,68 @@
 
   <div class="row">
    
+
+                <div class="input-field col s12 m2">
+                      <select>
+                        <option value="" disabled selected>Select crop</option>
+                        <option value="1">Oranges</option>
+                        <option value="2">Pumpkins</option>
+                        <option value="3">Tomatoes</option>
+                      </select>
+                
+                </div>
+
+
+                <div class="input-field col s12 m2">
+                      <select>
+                        <option value="" disabled selected>Select town</option>
+                        <option value="1">Nairobi</option>
+                        <option value="2">Mombasa</option>
+                        <option value="3">Kisumu</option>
+                        <option value="4">Eldoret</option>
+                        <option value="5">Nakuru</option>
+                        <option value="5">Average</option>
+                      </select>
+                
+                </div>
+
+                <div class="input-field col s12 m2">
+                      <input type="date" class="datepicker">
+                      <label for="input_text">From</label>
+                
+                </div>
+
+                <div class="input-field col s12 m2">
+                      <input type="date" class="datepicker">
+                      <label for="input_text">To</label>
+                
+                </div>
+
+                
+
+
     
-    <div class="col s12 m8 l8">
+    <div class="col s12 m12 l12">
             <div class="row">
             <div class="col s12 m12">
               <div class="card-panel teal">
                 <span class="white-text">
-                    <table class="bordered responsive-table">
-                    <thead>
-                      <tr>
-                          <th data-field="id">Crop</th>
-                          <th data-field="name">Location</th>
-                          <th data-field="name">Package</th>
-                          <th data-field="price">Low</th>
-                          <th data-field="price">High</th>
-                      </tr>
-                     </thead>
-
-                   <tbody>
-                        <tr>
-                          <td>Orange</td>
-                          <td>Nairobi</td>
-                          <td>90 kg bag</td>
-                          <td>2000 KES</td>
-                          <td>3000 KES</td>
-                        </tr>
-                        <tr>
-                         <td>Orange</td>
-                          <td>Nairobi</td>
-                          <td>90 kg bag</td>
-                          <td>2000 KES</td>
-                          <td>3000 KES</td>
-                        </tr>
-                        <tr>
-                         <td>Orange</td>
-                          <td>Nairobi</td>
-                          <td>90 kg bag</td>
-                          <td>2000 KES</td>
-                          <td>3000 KES</td>
-                        </tr>
-
-                        <tr>
-                          <td>Orange</td>
-                          <td>Nairobi</td>
-                          <td>90 kg bag</td>
-                          <td>2000 KES</td>
-                          <td>3000 KES</td>
-                        </tr>
-                        <tr>
-                         <td>Orange</td>
-                          <td>Nairobi</td>
-                          <td>90 kg bag</td>
-                          <td>2000 KES</td>
-                          <td>3000 KES</td>
-                        </tr>
-                        <tr>
-                         <td>Orange</td>
-                          <td>Nairobi</td>
-                          <td>90 kg bag</td>
-                          <td>2000 KES</td>
-                          <td>3000 KES</td>
-                        </tr>
-
-                        <tr>
-                          <td>Orange</td>
-                          <td>Nairobi</td>
-                          <td>90 kg bag</td>
-                          <td>2000 KES</td>
-                          <td>3000 KES</td>
-                        </tr>
-                        <tr>
-                         <td>Orange</td>
-                          <td>Nairobi</td>
-                          <td>90 kg bag</td>
-                          <td>2000 KES</td>
-                          <td>3000 KES</td>
-                        </tr>
-                        <tr>
-                         <td>Orange</td>
-                          <td>Nairobi</td>
-                          <td>90 kg bag</td>
-                          <td>2000 KES</td>
-                          <td>3000 KES</td>
-                        </tr>
-                   </tbody>
-
-                  </table>
+                     <canvas id="buyers" width="900px" height="400px"></canvas>
                 </span>
 
               </div>
             </div>
 
-            <a class="waves-effect waves-light btn-large">View All</a>
-
+           
           </div>
     </div>
 
 
-    <div class="col s12 m4 l4">
+    <div class="col s12 m12 l12">
 
        <!-- card for top gainers-->
           <div class="row">
-            <div class="col s12 m12">
+            <div class="col s12 m6">
               <div class="card-panel teal">
                 <span class="white-text">
 
@@ -200,11 +161,11 @@
                 </span>
               </div>
             </div>
-          </div>
+         
 
          <!-- card for top losers-->
-           <div class="row">
-            <div class="col s12 m12">
+           
+            <div class="col s12 m6">
               <div class="card-panel teal">
                 <span class="white-text">
                       <table class="bordered responsive-table">
@@ -269,12 +230,36 @@
           </a>
     
       </div>
+       
 
+
+      <script>
+            // line chart data
+            var buyerData = {
+                labels : ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
+                datasets : [
+                {
+                    fillColor : "rgba(172,194,132,0.4)",
+                    strokeColor : "#ACC26D",
+                    pointColor : "#fff",
+                    pointStrokeColor : "#9DB86D",
+                    data : [203,156,99,251,305,247,300,700,500,343,567,577]
+                }
+            ]
+            }
+            // get line chart canvas
+            var buyers = document.getElementById('buyers').getContext('2d');
+            // draw line chart
+            new Chart(buyers).Line(buyerData);
+           
+        </script>
    
       <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="materialize.min.js"></script>
         <script type="text/javascript" src="justus.js"></script>
-        <script src="typed.js" type="text/javascript"></script>
+        
+
+
     </body>
   </html>
