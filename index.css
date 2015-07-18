@@ -44,11 +44,50 @@ footer.page-footer{
 
 .teal th{
 	
-	background-color: #58b758 !important;
-
+	color: black !important;
 }
 
 
 .btn, .btn-large {
 	  background-color: #58b758;
+}
+
+.overlay {
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color:#fff;
+    opacity:0.8;
+    z-index:1001;
+}
+.overlay-message{
+    position: fixed;
+    top:30px;
+    left:30px;
+    width:400px;
+    height:250px;
+    background-color:#fff;
+    opacity:1;
+    z-index:1002;
+}
+
+.buttonlogins{
+    background-color: #5CB85C;
+      margin-top: 10%;
+
+}
+
+.btns{
+	color: white;
+	text-align: center;
+}
+
+.submit-btn{
+	  float: right;
+}
+
+.login-container{
+	min-height: 400px;
 }
