@@ -36,6 +36,7 @@ footer.page-footer{
 .teal{
 	background-color: white !important;
 	color: black !important;
+    padding-top: 0px;
 }
 
 .teal td{
@@ -100,6 +101,8 @@ footer.page-footer{
 
 .table-topics{
     background-color: #5CB85C;
+    padding-top: 0px;
+    margin-bottom: 0px;
       
 }
 
