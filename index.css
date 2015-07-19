@@ -91,3 +91,13 @@ footer.page-footer{
 .login-container{
 	min-height: 400px;
 }
+
+.blog-image{
+    height: 300px;
+    width: 100%;
+}
+
+.table-topics{
+    background-color: #5CB85C;
+      
+}
