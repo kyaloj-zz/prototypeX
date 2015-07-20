@@ -196,9 +196,18 @@ footer.page-footer{
 }
 
 .btn-floating.btn-large {
- 
+
   width: 113.5px;
   height: 51.5px;
   border-radius: 27px;
   /* padding-bottom: 52px; */
+}
+
+.submit-btn {
+  float: right;
+  width: 100%;
+}
+
+form{
+    padding: 0;
 }
