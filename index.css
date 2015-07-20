@@ -1,6 +1,11 @@
+.container{
+    min-height: 90%;
+      width: 85%;
+}
+
 .logo{
-    height: 40px;
-    width: 60px;
+   height: 40px; 
+     margin-top: 9px;
 }
 
 nav{
@@ -8,8 +13,28 @@ nav{
     
 }
 
+nav ul{
+    
+    margin: 0 114px;
+}
+
 nav ul a{
     color: black;
+    
+}
+
+.joiners{
+    margin-right: 0px;
+}
+
+.signup {
+   background-color: transparent !important;
+   text-transform: none;
+  color: black;
+  border-style: solid;
+  border-color: #5CB85C;
+  box-shadow: none !important;
+  padding-bottom: 37px;
 }
 
 .parallax-container {
