@@ -180,3 +180,25 @@ footer.page-footer{
   height: 1px;
   background: #5cb85c;
 }
+
+.info-button{
+    text-align: center;
+}
+
+.product2{
+    background-color: #EEEEEE;
+    padding: 20px 0;
+}
+
+.html5-video-container {
+  height: 300px;
+  width: 300px;
+}
+
+.btn-floating.btn-large {
+ 
+  width: 113.5px;
+  height: 51.5px;
+  border-radius: 27px;
+  /* padding-bottom: 52px; */
+}
