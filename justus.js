@@ -3,6 +3,8 @@
        $('.parallax').parallax();
        $(".button-collapse").sideNav();
        $('select').material_select();
+       
+       $(".dropdown-button").dropdown();
 
        $('.datepicker').pickadate({
 		    selectMonths: true, 

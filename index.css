@@ -211,3 +211,21 @@ footer.page-footer{
 form{
     padding: 0;
 }
+
+.selectors{
+    margin-top: 20px;
+}
+
+.customising-area{
+    margin: 0;
+    padding: 0;
+}
+
+canvas#buyers{
+    width: 100%;
+    height: 300px
+}
+
+td{
+    font-size: 14px;
+}

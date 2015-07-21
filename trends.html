@@ -17,24 +17,37 @@
 
 
  <div class="navbar-fixed">
-   <nav>
+    <nav>
 
    <div class="container"> 
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo"><img src="mfarm_logo.png" class="logo"></a>
+      <a href="#!" class="brand-logo left"><img src="mfarm_logo.png" class="logo"></a>
      
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="prices.html">Prices</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contacts.html">Contacts</a></li>
+      <ul class="left hide-on-med-and-down">
+          <li ><a href="index.html">Home</a></li>
+          <li class="active"><a href="prices.html">Prices</a></li>
+          
       </ul>
+
+      <ul class="right hide-on-med-and-down joiners">
+         
+          <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
+      </ul>
+     
+             
+              <!-- Dropdown Structure -->
+        <ul id="dropdown1" class="dropdown-content">
+          <li><a href="#!">Setting</a></li>
+          <li><a href="index.html">Logout</a></li>
+         
+        </ul>
+     </div>
+
       <ul class="side-nav" id="mobile-demo">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="prices.html">Prices</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contacts.html">Contacts</a></li>
+          <li ><a href="index.html">Home</a></li>
+          <li class="active"><a href="prices.html">Prices</a></li>
+         <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
       </ul>
     </div>
      </div>
@@ -43,75 +56,124 @@
   <div class="container">
 
   <!-- row with the selectors-->
-   <div class="row">
-      <a class="waves-effect waves-light btn" href="prices.html"><i class="material-icons left"></i>Daily Prices</a>
-      <a class="waves-effect waves-light btn" href="trends.html"><i class="material-icons left"></i>Trends</a>
+
+   <div class="row selectors">
+   
+      <a class=" waves-effect waves-light btn-flat" href="prices.html"><i class="material-icons left"></i>Daily Prices</a>
+      <a class=" active waves-effect waves-light btn-flat" href="trends.html"><i class="material-icons left"></i>Trends</a>
       
 
-      <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Currency</a>
-
-  <!-- Dropdown Structure -->
-    <ul id='dropdown1' class='dropdown-content'>
-      <li><a href="#!">KES</a></li>
-      <li><a href="#!">USD</a></li>
-    </ul>
-
-    
   </div>
 
 
   <!--row with the content cards-->
 
 
-  <div class="row">
+  
    
-
-                <div class="input-field col s12 m2">
-                      <select>
-                        <option value="" disabled selected>Select crop</option>
-                        <option value="1">Oranges</option>
-                        <option value="2">Pumpkins</option>
-                        <option value="3">Tomatoes</option>
-                      </select>
-                
-                </div>
+           
+        <div class="card-panel teal customising-area">
 
 
-                <div class="input-field col s12 m2">
-                      <select>
-                        <option value="" disabled selected>Select town</option>
-                        <option value="1">Nairobi</option>
-                        <option value="2">Mombasa</option>
-                        <option value="3">Kisumu</option>
-                        <option value="4">Eldoret</option>
-                        <option value="5">Nakuru</option>
-                        <option value="5">Average</option>
-                      </select>
-                
-                </div>
-
-                <div class="input-field col s12 m2">
-                      <input type="date" class="datepicker">
-                      <label for="input_text">From</label>
-                
-                </div>
-
-                <div class="input-field col s12 m2">
-                      <input type="date" class="datepicker">
-                      <label for="input_text">To</label>
-                
-                </div>
-
-                
+        <div class="row customising-area">
+           <div class="col s12 m8 customising-area"><p>Cuompare prices</p></div>
+           <div class="col s12 m4 customising-area"><p>Select period</p></div>
+        </div>
 
 
+           <div class="row customising-area">    
+
+              <div class="col s12 m6 customising-area">
+
+                    <div class="input-field col s12 m2 customising-area ">
+                          <select>
+                            <option value="" disabled selected>Crop A</option>
+                            <option value="1">Oranges</option>
+                            <option value="2">Pumpkins</option>
+                            <option value="3">Tomatoes</option>
+                          </select>
+                    
+                    </div>
+
+
+                    <div class="input-field col s12 m2 customising-area">
+                          <select>
+                            <option value="" disabled selected>Town</option>
+                            <option value="1">Nairobi</option>
+                            <option value="2">Mombasa</option>
+                            <option value="3">Kisumu</option>
+                            <option value="4">Eldoret</option>
+                            <option value="5">Nakuru</option>
+                            <option value="5">Average</option>
+                          </select>
+                    
+                    </div>
+
+                    <div class="col s12 m2">
+                         
+                          <p>vs</p>
+                    
+                    </div>
+
+
+
+
+                    <div class="input-field col s12 m3 customising-area">
+                          <select>
+                            <option value="" disabled selected>Crop B</option>
+                            <option value="1">Oranges</option>
+                            <option value="2">Pumpkins</option>
+                            <option value="3">Tomatoes</option>
+                          </select>
+                    
+                    </div>
+
+
+                    <div class="input-field col s12 m3 customising-area">
+                          <select>
+                            <option value="" disabled selected>Town</option>
+                            <option value="1">Nairobi</option>
+                            <option value="2">Mombasa</option>
+                            <option value="3">Kisumu</option>
+                            <option value="4">Eldoret</option>
+                            <option value="5">Nakuru</option>
+                            <option value="5">Average</option>
+                          </select>
+                    
+                    </div>
+
+                   </div> 
+
+                   <div class="col s12 m2"><p></p></div>
+                   <div class="col s12 m4 customising-area">
+                          <div class="row customising-area">
+                                  <div class="input-field col s12 m6">
+                                        <input type="date" class="datepicker">
+                                        <label for="input_text">From</label>
+                                  
+                                  </div>
+
+                                  <div class="input-field col s12 m6">
+                                        <input type="date" class="datepicker">
+                                        <label for="input_text">To</label>
+                                  
+                                  </div>
+                          </div>
+                    </div>
+   
+       </div>
+    
+</div>
+
+<div class="row">
     
     <div class="col s12 m12 l12">
             <div class="row">
             <div class="col s12 m12">
               <div class="card-panel teal">
-                <span class="white-text">
-                     <canvas id="buyers" width="900px" height="300px"></canvas>
+                <span class="black-text">
+                     <canvas id="buyers" ></canvas>
+                     <p>Orange trends since Jan 2014 to Dec 2014</p>
                 </span>
 
               </div>
@@ -125,7 +187,7 @@
     <div class="col s12 m12 l12">
 
        <!-- card for top gainers-->
-          <div class="row">
+          <div class="row customising-area">
             <div class="col s12 m6">
               <div class="card-panel teal">
                 <span class="white-text">
@@ -146,18 +208,7 @@
                      </thead>
 
                    <tbody>
-                         <tr>
-                          <td>Avocado</td>
-                          <td>Mombasa</td>
-                          <td>87</td>
-                          <td>KES 300</td>
-                        </tr>
-                        <tr>
-                          <td>Courgettes</td>
-                          <td>Nairobi</td>
-                          <td>86</td>
-                          <td>KES 300</td>
-                        </tr>
+                         
                         <tr>
                           <td>Tomatoes</td>
                           <td>Kisumu</td>
@@ -207,18 +258,7 @@
                      </thead>
 
                    <tbody>
-                        <tr>
-                          <td>Avocado</td>
-                          <td>Mombasa</td>
-                          <td>87</td>
-                          <td>KES 300</td>
-                        </tr>
-                        <tr>
-                          <td>Courgettes</td>
-                          <td>Nairobi</td>
-                          <td>86</td>
-                          <td>KES 300</td>
-                        </tr>
+                        
                         <tr>
                           <td>Tomatoes</td>
                           <td>Kisumu</td>
@@ -268,12 +308,12 @@
           </div>
         </footer>
       
-      <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+    <!--   <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
           <a class="btn-floating btn-large red">
             <i class="large material-icons">mode_edit</i>
           </a>
     
-      </div>
+      </div> -->
        
 
 
@@ -302,6 +342,7 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="materialize.min.js"></script>
         <script type="text/javascript" src="justus.js"></script>
+        <script type="text/javascript" src="jquery.searchabledropdown-1.0.8.min.js"></script>
         
 
 
