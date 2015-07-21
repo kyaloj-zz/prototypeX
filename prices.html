@@ -16,24 +16,37 @@
 
 
   <div class="navbar-fixed">
-   <nav>
+    <nav>
 
    <div class="container"> 
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo"><img src="mfarm_logo.png" class="logo"></a>
+      <a href="#!" class="brand-logo left"><img src="mfarm_logo.png" class="logo"></a>
      
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="prices.html">Prices</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contacts.html">Contacts</a></li>
+      <ul class="left hide-on-med-and-down">
+          <li ><a href="index.html">Home</a></li>
+          <li class="active"><a href="prices.html">Prices</a></li>
+          
       </ul>
+
+      <ul class="right hide-on-med-and-down joiners">
+         
+          <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
+      </ul>
+     
+             
+              <!-- Dropdown Structure -->
+        <ul id="dropdown1" class="dropdown-content">
+          <li><a href="#!">Setting</a></li>
+          <li><a href="index.html">Logout</a></li>
+         
+        </ul>
+     </div>
+
       <ul class="side-nav" id="mobile-demo">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="prices.html">Prices</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contacts.html">Contacts</a></li>
+          <li ><a href="index.html">Home</a></li>
+          <li class="active"><a href="prices.html">Prices</a></li>
+         <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
       </ul>
     </div>
      </div>
@@ -43,12 +56,13 @@
   <div class="container">
 
   <!-- row with the selectors-->
-   <div class="row">
-      <a class="waves-effect waves-light btn-flat" href="prices.html"><i class="material-icons left"></i>Daily Prices</a>
-      <a class="waves-effect waves-light btn-flat" href="trends.html"><i class="material-icons left"></i>Trends</a>
-     
+  <div class="row selectors">
+   
+      <a class=" waves-effect waves-light btn-flat" href="prices.html"><i class="material-icons left"></i>Daily Prices</a>
+      <a class=" active waves-effect waves-light btn-flat" href="trends.html"><i class="material-icons left"></i>Trends</a>
+      
 
-      <a class='dropdown-button btn-flat' href='#' data-activates='dropdown1'>Select currency</a>
+  </div>
 
   <!-- Dropdown Structure -->
     <ul id='dropdown1' class='dropdown-content'>
@@ -56,8 +70,7 @@
       <li><a href="#!">USD</a></li>
     </ul>
 
-    
-  </div>
+ 
 
 
   <!--row with the content cards-->
@@ -73,9 +86,25 @@
                 <span class="white-text">
 
                     <div class="row table-topics">
+                    <div class="col s12 m6">
                       <p>
                         Price information for 16th July 2015
                       </p>
+
+                      </div>
+                       <div class="col s12 m6">
+                      <nav>
+                        <div class="nav-wrapper table-topics">
+                          <form>
+                            <div class="input-field">
+                              <input id="search" type="search" required>
+                              <label for="search"><i class="material-icons">search</i></label>
+                              <i class="material-icons">close</i>
+                            </div>
+                          </form>
+                        </div>
+                      </nav>
+                      </div>
                     </div>
                     <table class="bordered responsive-table">
                     <thead>
@@ -90,66 +119,73 @@
 
                    <tbody>
                         <tr>
-                          <td>Orange</td>
+                         <td>Oranges</td>
                           <td>Nairobi</td>
                           <td>90 kg bag</td>
                           <td>2000 KES</td>
                           <td>3000 KES</td>
                         </tr>
                         <tr>
-                         <td>Orange</td>
-                          <td>Nairobi</td>
-                          <td>90 kg bag</td>
-                          <td>2000 KES</td>
-                          <td>3000 KES</td>
-                        </tr>
-                        <tr>
-                         <td>Orange</td>
-                          <td>Nairobi</td>
+                         <td>Oranges</td>
+                          <td>Mombasa</td>
                           <td>90 kg bag</td>
                           <td>2000 KES</td>
                           <td>3000 KES</td>
                         </tr>
 
                         <tr>
-                          <td>Orange</td>
+                          <td>Oranges</td>
+                          <td>Nakuru</td>
+                          <td>90 kg bag</td>
+                          <td>2000 KES</td>
+                          <td>3000 KES</td>
+                        </tr>
+                        <tr>
+                         <td>Oranges</td>
+                          <td>Eldoret</td>
+                          <td>90 kg bag</td>
+                          <td>2000 KES</td>
+                          <td>3000 KES</td>
+                        </tr>
+                        <tr>
+                         <td>Oranges</td>
+                          <td>Kisumu</td>
+                          <td>90 kg bag</td>
+                          <td>2000 KES</td>
+                          <td>3000 KES</td>
+                        </tr>
+                        <tr>
+                         <td>Cabbages</td>
                           <td>Nairobi</td>
                           <td>90 kg bag</td>
                           <td>2000 KES</td>
                           <td>3000 KES</td>
                         </tr>
                         <tr>
-                         <td>Orange</td>
-                          <td>Nairobi</td>
-                          <td>90 kg bag</td>
-                          <td>2000 KES</td>
-                          <td>3000 KES</td>
-                        </tr>
-                        <tr>
-                         <td>Orange</td>
-                          <td>Nairobi</td>
+                         <td>Cabbages</td>
+                          <td>Mombasa</td>
                           <td>90 kg bag</td>
                           <td>2000 KES</td>
                           <td>3000 KES</td>
                         </tr>
 
                         <tr>
-                          <td>Orange</td>
-                          <td>Nairobi</td>
+                          <td>Cabbages</td>
+                          <td>Nakuru</td>
                           <td>90 kg bag</td>
                           <td>2000 KES</td>
                           <td>3000 KES</td>
                         </tr>
                         <tr>
-                         <td>Orange</td>
-                          <td>Nairobi</td>
+                         <td>Cabbages</td>
+                          <td>Eldoret</td>
                           <td>90 kg bag</td>
                           <td>2000 KES</td>
                           <td>3000 KES</td>
                         </tr>
                         <tr>
-                         <td>Orange</td>
-                          <td>Nairobi</td>
+                         <td>Cabbages</td>
+                          <td>Kisumu</td>
                           <td>90 kg bag</td>
                           <td>2000 KES</td>
                           <td>3000 KES</td>
@@ -162,8 +198,20 @@
               </div>
             </div>
 
-            <a class="waves-effect waves-light btn-large">View All</a>
-
+           
+          </div>
+          <div class="row">
+           <div class="col s12 m4 l2"><p></p></div>
+            <div class="col s12 m4 l8"> <ul class="pagination">
+                <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                <li class="active"><a href="#!">1</a></li>
+                <li class="waves-effect"><a href="#!">2</a></li>
+                <li class="waves-effect"><a href="#!">3</a></li>
+                <li class="waves-effect"><a href="#!">4</a></li>
+                <li class="waves-effect"><a href="#!">5</a></li>
+                <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+              </ul></div>
+            <div class="col s12 m4 l2"><p></p></div>
           </div>
     </div>
 
@@ -192,21 +240,21 @@
                       </tr>
                      </thead>
 
-                   <tbody>
+                  <tbody>
                         <tr>
-                          <td>Alvin</td>
-                          <td>Eclair</td>
-                          <td>$0.87</td>
+                          <td>Oranges</td>
+                          <td>Mombasa</td>
+                          <td>87</td>
                         </tr>
                         <tr>
-                          <td>Alan</td>
-                          <td>Jellybean</td>
-                          <td>$3.76</td>
+                          <td>Tomatoes</td>
+                          <td>Nairobi</td>
+                          <td>76</td>
                         </tr>
                         <tr>
-                          <td>Jonathan</td>
-                          <td>Lollipop</td>
-                          <td>$7.00</td>
+                          <td>Cauliflowers</td>
+                          <td>Nakuru</td>
+                          <td>70</td>
                         </tr>
                    </tbody>
 
@@ -242,19 +290,19 @@
 
                    <tbody>
                         <tr>
-                          <td>Alvin</td>
-                          <td>Eclair</td>
-                          <td>$0.87</td>
+                          <td>Pumpkins</td>
+                          <td>Mombasa</td>
+                          <td>-7</td>
                         </tr>
                         <tr>
-                          <td>Alan</td>
-                          <td>Jellybean</td>
-                          <td>$3.76</td>
+                          <td>Watermelons</td>
+                          <td>Nairobi</td>
+                          <td>-6</td>
                         </tr>
                         <tr>
-                          <td>Jonathan</td>
-                          <td>Lollipop</td>
-                          <td>$7.00</td>
+                          <td>Limes</td>
+                          <td>Nakuru</td>
+                          <td>-4</td>
                         </tr>
                    </tbody>
 
@@ -287,11 +335,11 @@
           </div>
         </footer>
       
-      <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+      <!-- <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
           <a class="btn-floating btn-large red ">
-            <i class="large material-icons">mode_edit</i>
+            <i class="material-icons">search</i>>
           </a>
-
+ -->
                    
 
    
