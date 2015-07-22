@@ -18,29 +18,39 @@
 
    
  
-   <div class="navbar-fixed">
+   <div id="main">
+ <div class="navbar-fixe">
    <nav>
 
    <div class="container"> 
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo"><img src="mfarm_logo.png" class="logo"></a>
+      <a href="#!" class="brand-logo left"><img src="mfarm_logo.png" class="logo"></a>
      
-     <!--  <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-          <li><a href="index.html">Home</a></li>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="left hide-on-med-and-down">
+         
+          
+      </ul> 
+     
+     
+       <ul id="nav-mobile" class="right hide-on-med-and-down joiners">
+        <li><a href="index.html">Home</a></li>
           <li><a href="prices.html">Prices</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contacts.html">Contacts</a></li>
+      
+        
       </ul>
-      <ul class="side-nav" id="mobile-demo">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="prices.html">Prices</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contacts.html">Contacts</a></li>
-      </ul> -->
-    </div>
      </div>
+
+      <ul class="side-nav" id="mobile-demo">
+         <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="prices.html">Prices</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Sign up</a></li>
+      </ul>
+    </div>
+     
   </nav>
+</div>
 </div>
 
   <div class="container">
@@ -50,22 +60,34 @@
 
            
           
-           <div class="col s12 m3 l3"><p></p></div>
+           <div class="col s12 m4 "><p></p></div>
 
-           <div class="col s12 m6 l6 formclass">
+           <div class="col s12 m4 formclass">
            <div class="row buttonlogins">
                
-                <a class="waves-effect waves-light btn-flat btns col s12 m12 l12" href="signup.html">Lets get you started right away</a>
+                <a class="waves-effect waves-light btn-flat btns col s12 m12 l12 btnsign" href="signup.html">Create Account</a>
             
             </div>
               <form class="col s12">
                 <div class="row">
-                  <div class="input-field col s12 m6">
+                  <div class="input-field col s12 m12">
                     <input id="first_name" type="text" class="validate">
-                    <label for="first_name">Name</label>
+                    <label for="first_name">First Name</label>
                   </div>
 
-                  <div class="input-field col s12 m6">
+                  </div>
+
+                  <div class="row">
+                  <div class="input-field col s12 m12">
+                    <input id="last_name" type="text" class="validate">
+                    <label for="last_name">Last Name</label>
+                  </div>
+
+                  </div>
+
+                  <div class="row">
+
+                  <div class="input-field col s12 m12">
                     <input id="email" type="email" class="validate">
                     <label for="email">Email</label>
                   </div>
@@ -74,76 +96,56 @@
 
                 <div class="row">
 
-                <div class="input-field col s12 m6">
+                <div class="input-field col s12 m12">
                  
-                  <input id="icon_telephone" type="tel" class="validate">
+                  <input id="icon_telephone" type="tel" class="validate" placeholder="+254707933993">
                   <label for="icon_telephone">Telephone</label>
                 </div>
+                </div>
 
-                <div class="input-field col s12 m6">
+                <div class="row">
+
+                <div class="input-field col s12 m12">
                     <input id="password" type="password" class="validate">
                     <label for="password">Password</label>
                   </div>
                 </div>
                 
                 
-                 <div class="row">
+                 <!-- <div class="row">
                    <div class=" input-field col s12 m12">
                     <input id="confirm-password" type="password" class="validate">
                     <label for="confirm-password">Confirm Password</label>
                     </div>
-                </div>
+                </div> -->
+
+                
 
                  <div class="row">
-                   <div class=" col s12">
-                    
-                      <p>Choose your payment option below</p>
-                    </div>
-                </div>
-
-                 <div class="row">
-                   <div class="input-field col s12 m3">
-                       <form action="#">
+                   <div class="input-field col s12 m12">
+                       <form id="who-are-you" action="#">
+                         <p>I am a</p>
                           <p>
                             <input name="group1" type="radio" id="test1" />
-                            <label for="test1">Mpesa</label>
+                            <label for="test1">Buyer</label>
                           </p>
                           <p>
                             <input name="group1" type="radio" id="test2" />
-                            <label for="test2">Airtel</label>
+                            <label for="test2">Supplier</label>
+                          </p>
+
+                          <p>
+                            <input name="group1" type="radio" id="test3" />
+                            <label for="test3">Both</label>
                           </p>
                           
                         </form>
                     </div>
 
-                    <div class="input-field col s12 m9">
-                       <p>
-                         To pay with Mpesa do the following:</p>
-
-                         <ol>
-<li>Go to "M-Pesa" menu on your phone</li>
-<li>Select "Pay Bill"</li>
-<li>Enter 967701 as the business number</li>
-<li>Enter 245 as the account no.</li>
-<li>Enter the amount to pay  </li>
-<li>Enter your M-Pesa pin</li>
-<li>Then send the request</li>
-                         </ol>
-Kindly note that it will take up to 1 hour from payment before you can access the prices
-Any problems with this procedure then contact M-Farm on phone: 0707933993
-                       </p>
-                    </div>
+                   
                 </div>
 
-                 <div class="row">
-
-                <div class="input-field col s12 m12">
-                 
-                  <input id="mfarm_code" type="tel" class="validate">
-                  <label for="mfarm_code">Enter Verification code</label>
-                </div>
-
-                </div>
+               
               </form>
  
  <div class="col-md-4">
@@ -185,9 +187,24 @@ Any problems with this procedure then contact M-Farm on phone: 0707933993
              <a href="trends.html"><button class="btn submit-btn waves-effect waves-light" type="submit" name="action">Submit
               <i class="material-icons">send</i>
             </button></a> 
-              </div>
 
-             <div class="col s12 m3 l3"></div>
+
+             <div class="row coolthings">
+             <div class = "col s6 m6">
+                <a href="#"><p>Sign in</p></a>
+                </div>
+
+               <div class = "col s6 m6">
+                <a href="#"><p>Forgot password?</p></a>
+                </div>
+              </div>
+        </div>
+
+
+
+
+
+             <div class="col s12 m4"></div>
 
 
     </div>
@@ -195,7 +212,7 @@ Any problems with this procedure then contact M-Farm on phone: 0707933993
 </div>
 
   <footer class="page-footer">
-          <div class="container">
+          <!-- <div class="container">
             <div class="row">
               <div class="col l6 s12">
                 <h5 class="white-text">Footer Content</h5>
@@ -209,8 +226,11 @@ Any problems with this procedure then contact M-Farm on phone: 0707933993
             © 2015 MFarm KE
             <a class="grey-text text-lighten-4 right" href="index.html">Back Home</a>
             </div>
-          </div>
+          </div> -->
+          <img src="footer.png">
         </footer>
+
+
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="materialize.min.js"></script>
