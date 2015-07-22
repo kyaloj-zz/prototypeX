@@ -10,14 +10,15 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+       <script src='Chart.min.js'></script>
     </head>
 
     <body>
 
   <!-- lets make some header-->
 
-   
- <div class="navbar-fixed">
+  <div id="main">
+ <div class="navbar-fixe">
    <nav>
 
    <div class="container"> 
@@ -25,14 +26,15 @@
       <a href="#!" class="brand-logo left"><img src="mfarm_logo.png" class="logo"></a>
      
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <!-- <ul class="left hide-on-med-and-down">
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="prices.html">Prices</a></li>
+      <ul class="left hide-on-med-and-down">
+         
           
-      </ul> -->
+      </ul> 
      
      
        <ul id="nav-mobile" class="right hide-on-med-and-down joiners">
+        <li><a href="index.html">Home</a></li>
+          <li><a href="prices.html">Prices</a></li>
         <li><a href="login.html">Sign in</a></li>
         <li><a class="waves-effect waves-light btn signup" href="pricing.html">Sign up</a></li>
         
@@ -40,41 +42,45 @@
      </div>
 
       <ul class="side-nav" id="mobile-demo">
-         <!--  <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="prices.html">Prices</a></li> -->
+         <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="prices.html">Prices</a></li>
           <li><a href="login.html">Login</a></li>
           <li><a href="signup.html">Sign up</a></li>
       </ul>
     </div>
-     </div>
+     
   </nav>
 </div>
 
+ <div class="product3">
+      
+      <div class="container">
+      <div class="row ">
+
+      
+      
+      <div class="col s12 m5 trends">
+        <h4>Trends</h4>
+        <p>
+          Use the trends, news alerts and comparison tools to make a </br> decision on where, what and when to sell or buy your crop.
+        </p>
+      </div>
+       <div class="col s12 m7">
+       <!-- <img class="blog-image" src="trendbq.png"> -->
+       <canvas id="buyers2" ></canvas>
+      </div>
+
+     </div>
+    </div>
+
+   </div>
+
+</div> 
 
  <!-- end of the header part-->
 
  <!--slider part-->
 
-   <div class="slider">
-    <ul class="slides">
-      
-      <li>
-        <img src="dailyprices.jpg"> <!-- random image -->
-        <div class="caption left-align">
-          <h3>Daily Prices</h3>
-          <h5 class="light grey-text text-lighten-3">Follow how your favourite crop is doing in the markets</h5>
-        </div>
-      </li>
-      <li>
-        <img src="capsicum_2.jpg"> <!-- random image -->
-        <div class="caption left-align">
-          <h3>Price trends</h3>
-          <h5 class="light grey-text text-lighten-3">Get historical data and make some real decisions</h5>
-        </div>
-      </li>
-     
-    </ul>
-  </div>
 
 
 <!--end of slider part-->
@@ -126,9 +132,9 @@
     </div>
     <br><br>
 
-    <div class="section info-button">
+   <!--  <div class="section info-button">
        <ul><li><a class="waves-effect waves-light btn signup" href="signup.html">Learn More</a></li></ul>
-    </div>
+    </div> -->
   </div>
   
   
@@ -138,14 +144,15 @@
    <!--some paralax to break the boredom-->
 
 
-
+<!-- 
    <div class="parallax-container">
       <div class="parallax">
            <img src="dailyprices.jpg">
       </div>
-    </div>
+    </div> -->
   
   <!--features section-->
+  <div class="product2">
   <div class="container">
     <h2 class="section-title"><span>Features</span></h2>
 
@@ -161,9 +168,11 @@
        <img class="blog-image" src="dailyprices.png">
       </div>
     </div>
-</div>
+    </div>
 
-  <div class="product2">
+ </div>
+
+  
       
       <div class="container">
       <div class="row ">
@@ -182,10 +191,23 @@
      </div>
     </div>
 
-   </div>
+   
+<div class="product2">
+ <div class="container">
+  <div class="row products">
+      <div class="col s12 m6 l6">
+        <h3>Expert advice</h3>
+        <p>
+          Every week, M-Farm will be featuring a crop of interest, either because of its popularity, it high or poor price performance in the market. Issues such as reasons behind its performance, agronomic advisory and general countrywide or global news on the crop will be addressed here. You will have a chance to read on other agribusiness owners successes and failures on the crop, contribute to their experiences and walk away with an investment worthy advise or comment.
+        </p>
+      </div>
 
-
-
+      <div class="col s12 m6 l6">
+       <img class="blog-image" src="orng.jpg">
+      </div>
+    </div>
+  </div>
+</div>
 
 <!--video section-->
 
@@ -204,7 +226,7 @@
 <!--footer-->
 
      <footer class="page-footer">
-          <div class="container">
+          <!-- <div class="container">
             <div class="row">
               <div class="col l6 s12">
                 <h5 class="white-text">Footer Content</h5>
@@ -218,7 +240,8 @@
             © 2015 MFarm KE
             <a class="grey-text text-lighten-4 right" href="index.html">Back Home</a>
             </div>
-          </div>
+          </div> -->
+          <img src="footer.png">
         </footer>
 
 
@@ -230,6 +253,27 @@
       </a>
      
     </div> -->
+
+    <script>
+            // line chart data
+            var buyerData = {
+                labels : ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
+                datasets : [
+                {
+                    fillColor : "rgba(172,194,132,0.4)",
+                    strokeColor : "#ACC26D",
+                    pointColor : "#fff",
+                    pointStrokeColor : "#9DB86D",
+                    data : [203,156,99,251,305,247,300,550,500,343,567,577]
+                }
+            ]
+            }
+            // get line chart canvas
+            var buyers = document.getElementById('buyers2').getContext('2d');
+            // draw line chart
+            new Chart(buyers).Line(buyerData);
+           
+        </script>
 
 
 

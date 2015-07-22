@@ -17,41 +17,32 @@
 
 
  <div class="navbar-fixed">
-    <nav>
+    <!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="#!">Settings</a></li>
+  <li><a href="index.html">Logout</a></li>
+  <li class="divider"></li>
+ 
+</ul>
 
-   <div class="container"> 
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo left"><img src="mfarm_logo.png" class="logo"></a>
-     
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul class="left hide-on-med-and-down">
+<nav>
+<div class="container">
+  <div class="nav-wrapper">
+    <a href="#!" class="brand-logo"><img src="mfarm_logo.png" class="logo"></a>
+    <ul class="left hide-on-med-and-down">
           <li ><a href="index.html">Home</a></li>
           <li class="active"><a href="prices.html">Prices</a></li>
           
       </ul>
-
-      <ul class="right hide-on-med-and-down joiners">
-         
-          <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
-      </ul>
+    <ul class="right hide-on-med-and-down">
      
-             
-              <!-- Dropdown Structure -->
-        <ul id="dropdown1" class="dropdown-content">
-          <li><a href="#!">Setting</a></li>
-          <li><a href="index.html">Logout</a></li>
-         
-        </ul>
-     </div>
+      <!-- Dropdown Trigger -->
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+  </div>
+  </div>
+</nav>
 
-      <ul class="side-nav" id="mobile-demo">
-          <li ><a href="index.html">Home</a></li>
-          <li class="active"><a href="prices.html">Prices</a></li>
-         <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
-      </ul>
-    </div>
-     </div>
-  </nav>
 </div>
   <div class="container">
 

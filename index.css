@@ -4,13 +4,18 @@
 }
 
 .logo{
-   height: 40px; 
-     margin-top: 9px;
+   height: 50px; 
+     margin-top: 2px;
 }
 
 nav{
-    background-color: white;
-    
+   background-color: transparent;
+      border-color: transparent;
+      text-decoration: none;
+      min-height: 92px;
+      padding-top: 22px;
+
+      
 }
 
 nav ul{
@@ -47,7 +52,17 @@ nav ul a{
 }
 
 footer.page-footer{
-	background-color: #5CB85C;
+	/*background-color: #5CB85C;*/
+    margin: 0;
+    padding: 0;
+}
+
+footer.page-footer img{
+    /*background-color: #5CB85C;*/
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .btn-floating {
@@ -154,6 +169,7 @@ footer.page-footer{
   
   position: relative;
   display: block;
+  margin: 0;
 }
 
 .section-title span{
@@ -188,6 +204,12 @@ footer.page-footer{
 .product2{
     background-color: #EEEEEE;
     padding: 20px 0;
+}
+
+.product3{
+   /* background-color: #EEEEEE;*/
+    padding: 20px 0;
+    margin-top: 40px;
 }
 
 .html5-video-container {
@@ -226,6 +248,38 @@ canvas#buyers{
     height: 300px
 }
 
+canvas#buyers2{
+    width: 100%;
+    height: 300px
+}
+
 td{
     font-size: 14px;
 }
+
+#main{
+    
+   /* background-color: #EEEEEE;*/
+   
+ /*  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('dailyprices.jpg');*/
+   
+  /* height: 500px;*/
+   
+   width:100%;
+  
+
+  
+
+
+}
+
+.trends{
+    
+   margin-top: 65px;
+}
+
+.trends p{
+    
+  /* padding-left: 15px;;*/
+}
+
