@@ -16,34 +16,44 @@
     <body>
 
 
- <div class="navbar-fixed">
-    <!-- Dropdown Structure -->
-<ul id="dropdown1" class="dropdown-content">
-  <li><a href="#!">Settings</a></li>
-  <li><a href="index.html">Logout</a></li>
-  <li class="divider"></li>
+ <div id="main">
  
-</ul>
+   <nav>
 
-<nav>
-<div class="container">
-  <div class="nav-wrapper">
-    <a href="#!" class="brand-logo"><img src="mfarm_logo.png" class="logo"></a>
-    <ul class="left hide-on-med-and-down">
-          <li ><a href="index.html">Home</a></li>
-          <li class="active"><a href="prices.html">Prices</a></li>
-          
-      </ul>
-    <ul class="right hide-on-med-and-down">
+   <div class="container"> 
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo left"><img src="mfarm_logo.png" class="logo"></a>
      
-      <!-- Dropdown Trigger -->
-      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
-    </ul>
-  </div>
-  </div>
-</nav>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="left hide-on-med-and-down">
+         
+          
+      </ul> 
+     
+     
+       <ul id="nav-mobile" class="right hide-on-med-and-down joiners">
+        <li><a href="index.html">Home</a></li>
+          <li><a href="prices.html">Prices</a></li>
+        <!-- <li><a href="login.html">Sign in</a></li> -->
+        <li><a class="waves-effect waves-light btn signup" href="pricing.html">Justus</a></li>
+        
+      </ul>
+     </div>
 
+      <ul class="side-nav" id="mobile-demo">
+         <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="prices.html">Prices</a></li>
+          <!-- <li><a href="login.html">Login</a></li> -->
+          <li><a href="signup.html">Profile</a></li>
+      </ul>
+    </div>
+     
+  </nav>
 </div>
+
+ 
+
+</div> 
   <div class="container">
 
   <!-- row with the selectors-->
@@ -67,7 +77,7 @@
 
 
         <div class="row customising-area">
-           <div class="col s12 m8 customising-area"><p>Cuompare prices</p></div>
+           <div class="col s12 m8 customising-area"><p>Compare prices</p></div>
            <div class="col s12 m4 customising-area"><p>Select period</p></div>
         </div>
 
@@ -100,7 +110,9 @@
                     
                     </div>
 
-                    <div class="col s12 m2">
+                    <!--comparison between different crops-->
+
+                  <!--   <div class="col s12 m2">
                          
                           <p>vs</p>
                     
@@ -131,7 +143,7 @@
                             <option value="5">Average</option>
                           </select>
                     
-                    </div>
+                    </div> -->
 
                    </div> 
 
@@ -163,8 +175,19 @@
             <div class="col s12 m12">
               <div class="card-panel teal">
                 <span class="black-text">
+                <p>Tomato trends since Jan 2014 to Dec 2014</p>
+
+                 <div id="one">
                      <canvas id="buyers" ></canvas>
-                     <p>Orange trends since Jan 2014 to Dec 2014</p>
+                     <div id="legen" class="chart-legend"></div>
+                   </div>
+
+                  <!--  <div id="two">
+                     <canvas id="buyers2" ></canvas>
+                     <div id="legen2" class="chart-legend"></div>
+
+                     </div> -->
+                     
                 </span>
 
               </div>
@@ -312,20 +335,163 @@
             // line chart data
             var buyerData = {
                 labels : ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
+                
+
                 datasets : [
                 {
-                    fillColor : "rgba(172,194,132,0.4)",
+                    label: "Eldoret",
+                    type: "bar",
+                    fillColor : "transparent",
+                    strokeColor : "#4D4D4D",
+                    pointColor : "#4D4D4D",
+                    pointStrokeColor : "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    
+                    data : [3750, 5188, 5200, 4038, 3926,3813, 5117,  7010,  6338,  5640,  3788,  4025]
+                },{
+        label: "Kisumu",
+        //new option, type will default to bar as that what is used to create the scale
+        type: "bar",
+                    fillColor : "transparent",
                     strokeColor : "#ACC26D",
-                    pointColor : "#fff",
-                    pointStrokeColor : "#9DB86D",
-                    data : [203,156,99,251,305,247,300,700,500,343,567,577]
-                }
+                    pointColor : "#ACC26D",
+                    pointStrokeColor : "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+        data: [4043, 4875 , 5056,  6392,  5280,  4167,  5792,  7422,  6813 , 5263,  5350,  4315]
+
+    },{
+        label: "Mombasa",
+        //new option, type will default to bar as that what is used to create the scale
+        type: "bar",
+        fillColor: "transparent",
+        strokeColor: "#FEA203",
+        pointColor: "#FEA203",
+        pointStrokeColor: "#fff",
+        pointHighlightFill: "#fff",
+        pointHighlightStroke: "rgba(220,220,220,1)",
+        data: [3544, 3697,  3910 , 5067 , 4012 , 2956,  4063,  4040,  3133,  3259 , 2618 , 3146]
+
+    },{
+        label: "Nairobi",
+        //new option, type will default to bar as that what is used to create the scale
+        type: "bar",
+        fillColor: "transparent",
+        strokeColor: "#FF0000",
+        pointColor: "#FF0000",
+        pointStrokeColor: "#fff",
+        pointHighlightFill: "#fff",
+        pointHighlightStroke: "rgba(220,220,220,1)",
+        data: [3168, 3383,  3075,  5617,  4238 , 2858 , 3913 , 6207,  5142,  3600,  2769,  2831]
+
+    },{
+        label: "Nakuru",
+        //new option, type will default to bar as that what is used to create the scale
+        type: "bar",
+        fillColor: "transparent",
+        strokeColor: "#FFFF00",
+        pointColor: "#FFFF00",
+        pointStrokeColor: "#fff",
+        pointHighlightFill: "#fff",
+        pointHighlightStroke: "rgba(220,220,220,1)",
+        data: [3318, 3318,  3369,  4842,  4341,  3839,  4630 , 6420 , 4929 , 4148 , 3283,  2601]
+
+    }
             ]
             }
             // get line chart canvas
             var buyers = document.getElementById('buyers').getContext('2d');
+            
+             
             // draw line chart
-            new Chart(buyers).Line(buyerData);
+         var myChart = new Chart(buyers).Line(buyerData, {
+legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
+
+         });
+            document.getElementById('legen').innerHTML = myChart.generateLegend();
+           
+        </script>
+
+         <script>
+            // line chart data
+            var buyerData2 = {
+                labels : ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
+                
+
+                datasets : [
+                {
+                    label: "Eldoret",
+                    type: "bar",
+                    fillColor : "transparent",
+                    strokeColor : "#4D4D4D",
+                    pointColor : "#4D4D4D",
+                    pointStrokeColor : "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    
+                    data : [3750, 5188, 5200, 4038, 3926,3813, 5117,  7010,  6338,  5640,  3788,  4025]
+                },{
+        label: "Kisumu",
+        //new option, type will default to bar as that what is used to create the scale
+        type: "bar",
+                    fillColor : "transparent",
+                    strokeColor : "#ACC26D",
+                    pointColor : "#ACC26D",
+                    pointStrokeColor : "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+        data: [4043, 4875 , 5056,  6392,  5280,  4167,  5792,  7422,  6813 , 5263,  5350,  4315]
+
+    },{
+        label: "Mombasa",
+        //new option, type will default to bar as that what is used to create the scale
+        type: "bar",
+        fillColor: "transparent",
+        strokeColor: "#FEA203",
+        pointColor: "#FEA203",
+        pointStrokeColor: "#fff",
+        pointHighlightFill: "#fff",
+        pointHighlightStroke: "rgba(220,220,220,1)",
+        data: [3544, 3697,  3910 , 5067 , 4012 , 2956,  4063,  4040,  3133,  3259 , 2618 , 3146]
+
+    },{
+        label: "Nairobi",
+        //new option, type will default to bar as that what is used to create the scale
+        type: "bar",
+        fillColor: "transparent",
+        strokeColor: "#FF0000",
+        pointColor: "#FF0000",
+        pointStrokeColor: "#fff",
+        pointHighlightFill: "#fff",
+        pointHighlightStroke: "rgba(220,220,220,1)",
+        data: [3168, 3383,  3075,  5617,  4238 , 2858 , 3913 , 6207,  5142,  3600,  2769,  2831]
+
+    },{
+        label: "Nakuru",
+        //new option, type will default to bar as that what is used to create the scale
+        type: "bar",
+        fillColor: "transparent",
+        strokeColor: "#FFFF00",
+        pointColor: "#FFFF00",
+        pointStrokeColor: "#fff",
+        pointHighlightFill: "#fff",
+        pointHighlightStroke: "rgba(220,220,220,1)",
+        data: [3318, 3318,  3369,  4842,  4341,  3839,  4630 , 6420 , 4929 , 4148 , 3283,  2601]
+
+    }
+            ]
+            }
+            // get line chart canvas
+            var buyers2 = document.getElementById('buyers2').getContext('2d');
+            
+             
+            // draw line chart
+         var myChart = new Chart(buyers2).Line(buyerData2, {
+legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
+
+         });
+            document.getElementById('legen2').innerHTML = myChart.generateLegend();
            
         </script>
    
