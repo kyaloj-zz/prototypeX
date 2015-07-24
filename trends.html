@@ -71,106 +71,11 @@
 
 
   
-   
-           
-        <div class="card-panel teal customising-area">
-
-
-        <div class="row customising-area">
-           <div class="col s12 m8 customising-area"><p>Filter</p></div>
-           <div class="col s12 m4 customising-area"><p>Select period</p></div>
-        </div>
-
-
-           <div class="row customising-area">    
-
-              <div class="col s12 m6 customising-area">
-
-                    <div class="input-field col s12 m2 customising-area ">
-                          <select>
-                            <option value="" disabled selected>Crop A</option>
-                            <option value="1">Oranges</option>
-                            <option value="2">Pumpkins</option>
-                            <option value="3">Tomatoes</option>
-                          </select>
-                    
-                    </div>
-
-
-                    <div class="input-field col s12 m2 customising-area">
-                          <select>
-                            <option value="" disabled selected>Town</option>
-                            <option value="1">Nairobi</option>
-                            <option value="2">Mombasa</option>
-                            <option value="3">Kisumu</option>
-                            <option value="4">Eldoret</option>
-                            <option value="5">Nakuru</option>
-                            <option value="5">Average</option>
-                          </select>
-                    
-                    </div>
-
-                    <!--comparison between different crops-->
-
-                  <!--   <div class="col s12 m2">
-                         
-                          <p>vs</p>
-                    
-                    </div>
-
-
-
-
-                    <div class="input-field col s12 m3 customising-area">
-                          <select>
-                            <option value="" disabled selected>Crop B</option>
-                            <option value="1">Oranges</option>
-                            <option value="2">Pumpkins</option>
-                            <option value="3">Tomatoes</option>
-                          </select>
-                    
-                    </div>
-
-
-                    <div class="input-field col s12 m3 customising-area">
-                          <select>
-                            <option value="" disabled selected>Town</option>
-                            <option value="1">Nairobi</option>
-                            <option value="2">Mombasa</option>
-                            <option value="3">Kisumu</option>
-                            <option value="4">Eldoret</option>
-                            <option value="5">Nakuru</option>
-                            <option value="5">Average</option>
-                          </select>
-                    
-                    </div> -->
-
-                   </div> 
-
-                   <div class="col s12 m2"><p></p></div>
-                   <div class="col s12 m4 customising-area">
-                          <div class="row customising-area">
-                                  <div class="input-field col s12 m6">
-                                        <input type="date" class="datepicker">
-                                        <label for="input_text">From</label>
-                                  
-                                  </div>
-
-                                  <div class="input-field col s12 m6">
-                                        <input type="date" class="datepicker">
-                                        <label for="input_text">To</label>
-                                  
-                                  </div>
-                          </div>
-                    </div>
-   
-       </div>
-    
-</div>
+  
 
 <div class="row">
     
-    <div class="col s12 m12 l12">
+    <div class="col s12 m8">
             <div class="row">
             <div class="col s12 m12">
               <div class="card-panel teal">
@@ -197,6 +102,72 @@
           </div>
     </div>
 
+<!--filtering section-->
+
+    <div class="col s12 m4">
+           
+        <div class="card-panel teal customising-area">
+
+
+
+           <div class="row customising-area">  
+
+            <div class="col s12 m8 customising-area"><p>Filter</p></div>
+              <div class="col s12 m12 customising-area">
+
+                    <div class="input-field col s12 m12 customising-area ">
+                          <select>
+                            <option value="" disabled selected>Crop A</option>
+                            <option value="1">Oranges</option>
+                            <option value="2">Pumpkins</option>
+                            <option value="3">Tomatoes</option>
+                          </select>
+                    
+                    </div>
+
+
+                    <div class="input-field col s12 m12 customising-area">
+                          <select>
+                            <option value="" disabled selected>Town</option>
+                            <option value="1">Nairobi</option>
+                            <option value="2">Mombasa</option>
+                            <option value="3">Kisumu</option>
+                            <option value="4">Eldoret</option>
+                            <option value="5">Nakuru</option>
+                            <option value="5">Average</option>
+                          </select>
+                    
+                    </div>
+
+              
+
+                   </div> 
+
+                   
+                   <div class="col s12 m12 customising-area">
+                          <div class="row customising-area">
+                                  <div class="input-field col s12 m6">
+                                        <input type="date" class="datepicker">
+                                        <label for="input_text">From</label>
+                                  
+                                  </div>
+
+                                  <div class="input-field col s12 m6">
+                                        <input type="date" class="datepicker">
+                                        <label for="input_text">To</label>
+                                  
+                                  </div>
+                          </div>
+                    </div>
+   
+       </div>
+  </div>  
+</div>
+
+
+<!--end of filtering section-->
+
+   
 
     <div class="col s12 m12 l12">
 
@@ -491,10 +462,14 @@ legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; 
              
             // draw line chart
          var myChart = new Chart(buyers2).Line(buyerData2, {
-legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
+legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>",
+
+
+
 
          });
             document.getElementById('legen2').innerHTML = myChart.generateLegend();
+            // Chart.defaults.global.responsive = true;
            
         </script>
    
